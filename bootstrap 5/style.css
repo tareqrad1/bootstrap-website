@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+    --btn-color:#0d6efd;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+ul {
+    list-style: none;
+}
+
+/* start the navbar */
+nav {
+    background-color: var(--dark-color);
+}
+nav ul li a {
+    text-transform: capitalize;
+    color: var(--section-color) !important;
+}
+nav .navbar-nav li .active {
+    color: var(--green-color) !important;
+}
+nav .navbar-nav li > .nav-link:hover,
+nav .navbar-nav li > .nav-link:focus {
+    color: var(--green-color) !important;
+}
+.navbar .navbar-toggler {
+    border: 1px solid var(--bs-gray-200);
+}
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+    border-color: var(--green-color);
+}
+.navbar .navbar-toggler > svg {
+    color: var(--section-color) !important;
+}
+.navbar .search {
+    border-left: 2px solid var(--green-color);
+}
+.navbar .search svg {
+    color: var(--green-color);
+    cursor: pointer;
+}
+
+/* start the landing page */
+.landing {
+    background-color: var(--dark-color);
+    height: calc(100vh - 72px);
+}
+/* start the main-title */
+.main-title::after {
+    content: '';
+    position: absolute;
+    background-color: var(--green-color);
+    height: 2px;
+    width: 150px;
+    left: 50%;
+    top: 173px;
+    transform: translateX(-50%);
+}
+/* start the feature */
+.feature .box .icon-holder {
+    height: 200px;
+}
+.feature .box .icon-holder svg {
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.feature .box .icon-holder .number {
+    font-size: 12rem;
+    color: var(--section-color);
+}
+.feature .box .icon-holder .pen {
+    color: var(--green-color);
+}
+.feature .box .text h4 {
+    color: var(--yellow-color);
+}
+
+/* start the our work */
+.our-work {
+    background-color: #eff7fa;
+}
+.our-work ul .active {
+    background-color: rgb(13, 110, 253);
+    color: white;
+}
+.our-work ul li {
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.our-work ul li:hover:not(:first-child) {
+    color: rgb(13, 110, 253);
+}
+.our-work .row .box {
+    position: relative;
+    padding: 5px;
+    background-color: white;
+    overflow: hidden;
+}
+.our-work .box::before {
+    content:attr(data-work);
+    position: absolute;
+    background-color: rgb(51 209 204 / 76%);
+    width:calc(100% - 10px);
+    height: calc(100% - 10px);
+    transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    font-weight: bold;
+    font-size: 24px;
+    transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before {
+    transform: translateX(0);
+    color: white;
+}
+
+/* start the stuff */
+.stuff .pargraph {
+    max-width: 500px;
+}
+.stuff .box .text {
+    max-width: 500px;
+}
+
+/* start the our-team */
+.our-team {
+    background-color: #eff7fa;
+}
+.our-team .text h2 {
+    color: var(--btn-color);
+}
+/* box */
+.our-team .box .text h4 {
+    background-color: var(--green-color);
+    color: white;
+}
+.our-team .box .text p {
+    font-size: 14px;
+}
+.our-team {
+    padding: 100px 0;
+}
+
+/* start the project */
+.project {
+    background-color: #19283f;
+}
+.project .text {
+    color: white;
+}
+.project .container > a {
+    display: block;
+    width: fit-content;
+    margin: 50px auto 0;
+}
+
+/* start the blog */
+.blog {
+    padding: 50px 0;
+}
+.blog .row .box {
+    border: 1px solid #ddd;
+}
+.blog .row .box .text {
+    padding-left: 5px;
+}
+.blog .row .box .text span {
+    color: #777;
+}
+.blog .row .box .text h2 {
+    font-size: 20px;
+}
+.blog .container a {
+    display: block;
+    width: fit-content;
+    margin: 50px auto;
+}
+
+/* start the contact */
+.contact {
+    padding: 50px 0;
+    background-color: var(--yellow-color);
+}
+.contact form input[type="email"] {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+}
+::placeholder {
+    color: white;
+}
+
+/* start the footer */
+.footer {
+    background-color: #19283f;
+    color: white;
+}
+.footer .box .text .span-one {
+    color: var(--green-color);
+}
+.footer .box .text .span-tow {
+    color: var(--yellow-color);
+}
+.footer .container .box ul li {
+    padding: 5px 0;
+}
+.footer .container .box ul li a {
+    text-decoration: none;
+}
+.footer .container .box ul li:first-child a {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+.footer .container .box ul li a{
+    color: #8c949f;
+}
+.footer .container .box ul li a:hover {
+    color: rgba(238, 238, 238, 0.251);
+}
+.footer .container .row .box .btn {
+    width: 100%;
+    margin-top: 20px;
+    color: var(--yellow-color);
+}
+.footer .box .social a svg {
+    font-size: 25px;
+    padding-right: 15px;
+    color: white;
+}
+.footer .box .social a svg:hover {
+    color: #888;
+}
+
+/* End The Project */
